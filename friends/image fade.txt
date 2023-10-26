@@ -1,0 +1,30 @@
+﻿Here's how to make this effect happen:
+
+1. In your HTML, create a div with the class fade-in-image.
+
+2. Place your image inside this div. Your HTML will look like this:
+
+ 
+
+<div class="fade-in-image">
+   <img src="source">
+</div>
+3. In your CSS, give your fade-in-image class the declaration animation: fadeIn 5s. You can adjust 5s to any span of time you want.
+
+ 
+
+.fade-in-image { animation: fadeIn 5s; }
+This assigns an animation called fadeIn to our div. This doesn’t do anything yet because we still need to create the effect using keyframes.
+
+4. In the CSS, use the @keyframes rule paired with fadeIn. At 0%, set the opacity to 0. At 100%, set the opacity to 1. This creates the fade-in effect.
+
+ 
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+5. It’s also recommended you repeat the code above using vendor prefixes — "-webkit", "-moz", "-o", and "-ms" — to ensure cross-browser compatibility. For example, "-webkit" is for Chrome, Safari, and almost all iOS browsers. This is shown in the final code below:
+
+
+You can keep reusing this CSS code with other images by using the fade-in-image CSS class within an element containing an image.
